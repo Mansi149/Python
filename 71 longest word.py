@@ -1,0 +1,20 @@
+"""
+PROBLEM 71 (COURSERA)
+Write a program for the longest_word function is used to compare 3 words. 
+It should return the word with the most number of characters (and the first in the list when they have the same length) ?
+"""
+
+def longest_word(word1, word2, word3):
+	if len(word1) >= len(word2) and len(word1) >= len(word3):
+		word = word1
+	elif len(word1) <= len(word2) and len(word2) >= len(word3):
+		word = word2
+	elif len(word3) >= len(word2) and len(word1) <= len(word3):
+		word = word3
+	else:
+		word = word1
+	return(word)
+
+print(longest_word("chair", "couch", "table"))
+print(longest_word("bed", "bath", "beyond"))
+print(longest_word("laptop", "notebook", "desktop"))
